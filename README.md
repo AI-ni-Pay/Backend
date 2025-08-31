@@ -1,112 +1,137 @@
-# Chatbot de Transacciones Cripto
+# Fast Base Sepolia Transaction Bot
 
-Un chatbot inteligente que utiliza AI (Deepseek) para facilitar transacciones de criptomonedas. El bot solicita automáticamente la dirección de destino, tipo de moneda y monto para procesar transacciones de forma conversacional.
+An intelligent chatbot powered by AI (Deepseek) that facilitates fast cryptocurrency transactions on the Base Sepolia testnet. The bot automatically processes transaction requests with instant execution - no confirmations needed!
 
-## 🚀 Características
+## 🚀 Features
 
-- **Chatbot con AI**: Utiliza la API de Deepseek para conversaciones naturales
-- **Detección Automática**: Extrae automáticamente direcciones, monedas y montos del texto
-- **Soporte Multi-Moneda**: BTC, ETH, USDT, USDC, BNB, ADA, SOL, XRP, DOT, DOGE
-- **Integración Blockchain**: Smart contract en Solidity para gestión de transacciones
-- **Validación de Direcciones**: Soporte para direcciones Ethereum y Bitcoin
-- **Modo Simulación**: Testing seguro sin transacciones reales
+- **AI-Powered Chatbot**: Uses Deepseek API for natural conversations
+- **Instant Execution**: Automatically executes transactions when address + amount are detected
+- **Base Sepolia Network**: Specifically designed for Base Sepolia testnet
+- **MetaMask Integration**: Direct Web3 integration with MetaMask wallet
+- **Smart Validation**: Automatic address and amount validation
+- **No Confirmation Delays**: Fast, direct transaction processing
 
-## 📋 Requisitos
+## 📋 Requirements
 
-- Navegador web moderno con soporte para ES6
-- MetaMask (opcional, para funcionalidad blockchain real)
-- Conexión a internet para API de Deepseek
+- Modern web browser with ES6 support
+- MetaMask extension installed
+- Base Sepolia testnet configured
+- Internet connection for Deepseek API
 
-## 🛠️ Instalación
+## 🛠️ Installation
 
-1. Clona o descarga este repositorio
-2. Abre `index.html` en tu navegador web
-3. ¡El chatbot está listo para usar!
+1. Clone or download this repository
+2. Open `index.html` in your web browser
+3. Connect your MetaMask wallet
+4. The chatbot is ready to use!
 
-## 🔧 Configuración
+## 🔧 Configuration
 
-### API de Deepseek
-- API Key ya configurada en `config.json`
-- 2M tokens disponibles para testing
-- Costo: $2 USD
+### Deepseek API
+- API Key already configured in the code
+- 2M tokens available for testing
+- Cost: $2 USD
 
-### Smart Contract
-- Contrato `TransactionManager.sol` incluido
-- Dirección del contrato debe actualizarse en `config.json` después del despliegue
-- Actualmente en modo simulación
+### Base Sepolia Network
+- Chain ID: 84532
+- RPC URL: https://base-sepolia.blockpi.network/v1/rpc/public
+- Block Explorer: https://sepolia-explorer.base.org
 
-## 💬 Uso del Chatbot
+## 💬 Using the Chatbot
 
-1. **Inicio**: El bot te saluda y explica qué información necesita
-2. **Conversación**: Habla naturalmente, por ejemplo:
-   - "Quiero enviar 0.5 ETH a 0x742d35Cc6634C0532925a3b8D39754d5B9b89eA5"
-   - "Enviar 100 USDT"
-   - "La dirección es bc1qxy2kgdygjrsqtzq2n0yrf2493p83kkfjhx0wlh"
-3. **Confirmación**: El bot extraerá los datos y mostrará un resumen
-4. **Ejecución**: Confirma para procesar (simulación por ahora)
+1. **Connect Wallet**: Click "🦊 Connect MetaMask" 
+2. **Send Transaction**: Type naturally, for example:
+   - "Send 0.1 ETH to 0x742d35Cc6634C0532925a3b8D39754d5B9b89eA5"
+   - "Transfer 0.01 ETH to 0x123..."
+3. **Instant Execution**: The bot detects address + amount and executes immediately
+4. **Result**: See transaction hash and confirmation
 
-## 📁 Estructura del Proyecto
+## 📁 Project Structure
 
 ```
-├── index.html              # Interfaz principal
-├── app.js                  # Lógica del chatbot y API
-├── web3-integration.js     # Integración blockchain
-├── styles.css              # Estilos básicos
+├── index.html              # Main interface
+├── app.js                  # Chatbot logic and API
+├── web3-integration.js     # Blockchain integration
+├── styles.css              # Styling
 ├── TransactionManager.sol  # Smart contract
-├── config.json            # Configuraciones
-└── README.md              # Este archivo
+├── config.json            # Configurations
+└── README.md              # This file
 ```
 
-## 🔍 Funcionalidades Principales
+## 🔍 Key Features
 
-### Detección Automática
-- **Direcciones**: Ethereum (0x...), Bitcoin (1... 3... bc1...)
-- **Monedas**: BTC, ETH, USDT, USDC, BNB, ADA, SOL, XRP, DOT, DOGE
-- **Montos**: Números decimales con soporte para múltiples formatos
+### Instant Processing
+- **Fast Execution**: No confirmation screens or delays
+- **Smart Detection**: Automatically detects Ethereum addresses (0x...)
+- **Amount Recognition**: Processes decimal amounts in ETH
+- **Direct MetaMask**: Sends transactions directly through MetaMask
 
-### Validación
-- Verificación de formato de direcciones
-- Validación de montos mínimos y máximos
-- Confirmación de datos antes de procesar
+### Base Sepolia Integration
+- **Testnet Only**: Safe testing environment
+- **ETH Transactions**: Handles Sepolia ETH transfers
+- **Gas Optimization**: Automatic gas estimation and pricing
+- **Network Validation**: Ensures correct network before execution
 
-### Smart Contract Features
-- Creación de transacciones
-- Ejecución segura con validaciones
-- Historial de transacciones
-- Eventos para seguimiento
+### AI-Powered Chat
+- **Natural Language**: Type requests in plain English
+- **Context Aware**: Remembers conversation context
+- **Error Handling**: Clear error messages and troubleshooting
+- **User Guidance**: Helps with wallet setup and network configuration
 
-## 🧪 Modo Testing
+## 🧪 Testing Mode
 
-Actualmente configurado para testing seguro:
-- `simulationMode: true` en `config.json`
-- No se ejecutan transacciones reales
-- Todas las validaciones funcionan
-- API de Deepseek completamente funcional
+Currently configured for safe testing:
+- Base Sepolia testnet only
+- Real MetaMask integration
+- Simulation mode if MetaMask not detected
+- Deepseek API fully functional
 
-## 🔐 Seguridad
+## 🔐 Security
 
-- Validaciones de entrada estrictas
-- No almacenamiento de claves privadas
-- Confirmación requerida antes de transacciones
-- Modo simulación por defecto
+- Strict input validation
+- No private key storage
+- MetaMask handles all signing
+- Testnet-only transactions
+- Balance verification before execution
 
-## 🚧 Próximas Funcionalidades
+## ⚡ Quick Start
 
-- [ ] Estilos y diseño mejorado
-- [ ] Soporte para más criptomonedas
-- [ ] Integración con exchanges
-- [ ] Historial de conversaciones
-- [ ] Notificaciones push
-- [ ] Soporte multi-idioma
+1. **Install MetaMask**: Download from metamask.io
+2. **Add Base Sepolia**: The bot will help you configure it
+3. **Get Test ETH**: Use Base Sepolia faucets
+4. **Connect & Send**: "Send 0.01 ETH to 0x..."
 
-## 📞 Soporte
+## 🎯 Usage Examples
 
-Este es un proyecto de testing para demostrar la integración de AI con blockchain. Para uso en producción, se requieren configuraciones adicionales de seguridad.
+```
+User: "Send 0.1 ETH to 0x742d35Cc6634C0532925a3b8D39754d5B9b89eA5"
+Bot: 🚀 Executing transaction immediately...
+     ✅ Transaction completed successfully!
+```
 
-## 📄 Licencia
+```
+User: "Transfer 0.01 ETH to 0x123..."
+Bot: 🔄 Connecting with MetaMask...
+     ✅ 0.01 ETH sent successfully!
+```
 
-MIT License - Ver archivo LICENSE para más detalles
+## 🚧 Future Enhancements
+
+- [ ] Multiple network support
+- [ ] Transaction history display
+- [ ] Gas price optimization
+- [ ] Batch transactions
+- [ ] ENS domain support
+- [ ] Mobile responsive design
+
+## 📞 Support
+
+This is a testnet demonstration project showcasing AI + blockchain integration. For production use, additional security configurations are required.
+
+## 📄 License
+
+MIT License - See LICENSE file for details
 
 ---
 
-**Nota**: Este proyecto está en fase de testing. No realizar transacciones reales hasta configurar correctamente el entorno de producción.
+**Note**: This project is designed for Base Sepolia testnet only. Do not use with mainnet until properly configured for production.
