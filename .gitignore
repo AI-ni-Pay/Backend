@@ -1,0 +1,44 @@
+# Archivos con información sensible
+.env
+.env.local
+.env.production
+
+# Claves privadas y wallets
+*.key
+*.pem
+*.p12
+
+# Dependencias de Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Archivos de compilación de Hardhat
+cache/
+artifacts/
+
+# Archivos de IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Archivos del sistema
+.DS_Store
+Thumbs.db
+
+# Logs
+logs/
+*.log
+
+# Archivos temporales
+tmp/
+temp/
+
+# Archivos de cobertura
+coverage/
+
+# Archivos de distribución
+dist/
+build/

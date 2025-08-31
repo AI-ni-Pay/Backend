@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fast Base Sepolia Transaction Bot</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Web3.js CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/web3@1.8.2/dist/web3.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Fast Base Sepolia Transaction Bot</h1>
+        <div class="network-selector">
+            <label for="network-select">Network:</label>
+            <select id="network-select">
+                <option value="baseSepolia">Base Sepolia Testnet</option>
+            </select>
+            <span id="network-status">🔴 Disconnected</span>
+            <button id="connect-wallet" class="wallet-btn">🦊 Connect MetaMask</button>
+            <button id="add-network-manual" class="manual-btn" style="display:none;">Add Network Manually</button>
+            <span id="wallet-address" class="wallet-address"></span>
+        </div>
+        <div id="chat-container">
+            <div id="chat-messages"></div>
+            <div class="input-container">
+                <input type="text" id="user-input" placeholder="Type your transaction request here..." />
+                <button id="send-button">Send</button>
+            </div>
+        </div>
+        <div id="transaction-summary">
+            <h3>Transaction Summary</h3>
+            <div id="summary-content"></div>
+            <button id="execute-transaction">Execute Transaction</button>
+            <button id="cancel-transaction">Cancel</button>
+        </div>
+        <div id="transaction-history">
+            <h3>Transaction History</h3>
+            <div id="history-content"></div>
+        </div>
+    </div>
+
+    <script src="web3-integration.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

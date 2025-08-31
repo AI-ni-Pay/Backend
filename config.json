@@ -1,0 +1,73 @@
+{
+  "api": {
+    "deepseek": {
+      "apiKey": "sk-f984577379764c759173c5762d9c25ec",
+      "apiUrl": "https://api.deepseek.com/v1/chat/completions",
+      "model": "deepseek-chat",
+      "maxTokens": 500,
+      "temperature": 0.7
+    }
+  },
+  "blockchain": {
+    "contracts": {
+      "sepolia": "0xAA856F2FfCF2c87988C84348C4d7CAD738400Cb7",
+      "baseSepolia": "0x5478724d7FF34BFe2619472cE8f1719Bb0B343Cf"
+    },
+    "contractAddress": "0xAA856F2FfCF2c87988C84348C4d7CAD738400Cb7",
+    "supportedCurrencies": [
+      "ETH",
+      "SepoliaETH"
+    ],
+    "networks": {
+      "sepolia": {
+        "name": "Sepolia",
+        "chainId": "0xAA36A7",
+        "chainIdDecimal": 11155111,
+        "rpcUrl": "https://sepolia.infura.io/v3/",
+        "currency": "SepoliaETH",
+        "blockExplorer": "https://sepolia.etherscan.io",
+        "contractAddress": "0xAA856F2FfCF2c87988C84348C4d7CAD738400Cb7"
+      },
+      "baseSepolia": {
+        "name": "Base Sepolia Testnet",
+        "chainId": "0x14A34",
+        "chainIdDecimal": 84532,
+        "rpcUrl": "https://sepolia.base.org",
+        "currency": "ETH",
+        "blockExplorer": "https://sepolia-explorer.base.org",
+        "contractAddress": "0x5478724d7FF34BFe2619472cE8f1719Bb0B343Cf"
+      }
+    },
+    "defaultNetwork": "sepolia",
+    "gasLimit": 300000
+  },
+  "chatbot": {
+    "welcomeMessage": "¡Hola! Soy tu asistente para transacciones de criptomonedas. Para ayudarte a realizar una transacción, necesito que me proporciones:\n\n1. La dirección de destino\n2. El tipo de moneda (BTC, ETH, USDT, etc.)\n3. El monto a enviar\n\nPuedes darme esta información de cualquier manera. ¿En qué puedo ayudarte?",
+    "systemPrompt": "Eres un asistente especializado en transacciones de criptomonedas. Tu trabajo es obtener del usuario: 1) dirección de destino, 2) tipo de moneda, 3) monto. Debes ser amigable pero eficiente. Extrae esta información de las conversaciones y confirma los datos antes de proceder. Responde en español.",
+    "maxHistoryLength": 20
+  },
+  "validation": {
+    "addressPatterns": {
+      "ethereum": "^0x[a-fA-F0-9]{40}$",
+      "bitcoin": "^[13][a-km-zA-HJ-NP-Z1-9]{25,34}$",
+      "bitcoinBech32": "^bc1[a-zA-Z0-9]{39,59}$"
+    },
+    "minAmount": 0.000001,
+    "maxAmount": 1000000
+  },
+  "ui": {
+    "chatContainer": {
+      "maxHeight": "400px",
+      "maxMessages": 50
+    },
+    "animations": {
+      "typingSpeed": 50,
+      "fadeSpeed": 300
+    }
+  },
+  "testing": {
+    "simulationMode": true,
+    "mockTransactions": true,
+    "debugMode": false
+  }
+}
