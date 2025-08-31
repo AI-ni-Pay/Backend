@@ -1,4 +1,4 @@
-# Fast Base Sepolia Transaction Bot
+# AI-ni Pay - Fast Base Sepolia Transaction Bot
 
 An intelligent chatbot powered by AI (Deepseek) that facilitates fast cryptocurrency transactions on the Base Sepolia testnet. The bot automatically processes transaction requests with instant execution - no confirmations needed!
 
