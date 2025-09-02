@@ -1,6 +1,6 @@
 // Deepseek API Configuration
-const DEEPSEEK_API_KEY = 'sk-f984577379764c759173c5762d9c25ec';
-const DEEPSEEK_API_URL = 'https://api.deepseek.com/v1/chat/completions';
+const DEEPSEEK_API_KEY = '';
+const DEEPSEEK_API_URL = '';
 
 // Chatbot state
 let transactionData = {
