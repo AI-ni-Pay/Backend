@@ -1,6 +1,6 @@
 // Deepseek API Configuration
 const DEEPSEEK_API_KEY = 'API key';
-const DEEPSEEK_API_URL = '';
+const DEEPSEEK_API_URL = 'URL deepseek';
 
 // Chatbot state
 let transactionData = {
